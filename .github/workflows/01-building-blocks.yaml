@@ -8,7 +8,7 @@ jobs:
     - name: hello
       run: echo "Hellow, World!"
   echo-goodbye:
-    runs-on: ubuntu:latest
+    runs-on: ubuntu-latest
     needs: echo-hello
     steps:
     - name: Successfull Stepup
