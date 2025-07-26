@@ -1,0 +1,19 @@
+name: "01-Building Blocks"
+on:
+- push
+- workflow_dispatch
+jobs:
+  echo-hello:
+    runs-on: ubuntu-latest
+    steps:
+    - name: hello
+      run: echo "Hellow, World!"
+  echo-goodbye:
+    runs-on: ubuntu:latest
+    steps:
+    - name: Failed Stepup
+      run: |
+       echo "I will Fail"
+       exit 1 
+    - name: Say Goodbye
+      run: echo "Goodbye!"
