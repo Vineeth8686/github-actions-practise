@@ -1,1 +1,1 @@
-# github-actions-practise
+Repository contains all the git hub folders.
