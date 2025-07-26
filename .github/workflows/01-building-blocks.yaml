@@ -11,9 +11,9 @@ jobs:
     runs-on: ubuntu:latest
     needs: echo-hello
     steps:
-    - name: Failed Stepup
+    - name: Successfull Stepup
       run: |
-       echo "I will Fail"
-       exit 1 
+       echo "I will Successfull"
+       exit 0 
     - name: Say Goodbye
       run: echo "Goodbye!"
