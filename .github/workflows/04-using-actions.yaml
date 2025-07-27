@@ -8,3 +8,7 @@ jobs:
       uses: actions/Checkout@v4
     - name: Printing Folders
       run: ls
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20.x'
