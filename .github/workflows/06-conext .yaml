@@ -1,5 +1,8 @@
 name: 06-Contexts
-on: push
+on: 
+  push:
+  workflow_dispatch:
+    
 jobs:
     echo-data:
       runs-on: ubuntu-latest
@@ -16,4 +19,3 @@ jobs:
       - name: Retrieve Variable
         run: |
           echo "Variable Value: ${{ vars.MY_VAR }}"
-          
