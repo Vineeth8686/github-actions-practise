@@ -1,8 +1,13 @@
 name: 05-01 Event type and Activity Types
 on:
     pull_request:
+    types:
+    - opened
+    - synchronize
+    branches:
+    - main
 jobs:
   echo:
     runs-on: ubuntu-latest
     steps:
-    - run: echo " Running whenever a pull request is open or synchronised and base branch is maim"
+    - run: echo " Running whenever a pull request is open or synchronised and base branch is main"
