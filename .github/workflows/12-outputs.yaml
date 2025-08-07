@@ -1,0 +1,15 @@
+name: GitHub Actions Outputs Example
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      result: ${{ steps.build.outputs.result }}
+    steps:
+    - name: build
+      id: build
+      run: echo "result=success" >> "$GITHUB_OUTPUT"
