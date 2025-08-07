@@ -24,11 +24,13 @@ jobs:
       deps-cache-key: ${{ steps.cache-key.outputs.CACHE_KEY }}
     steps:
     - name: Checkout Code
-      uses: actions/checkout@4
+      uses: actions/checkout@v4 
+
     - name: Setup Node
       uses: actions/setup-node@v4
       with:
         node-version: ${{ inputs.node-version }}
+
     - name: Calculate Cache Key
       id: cache-key
       run: |
