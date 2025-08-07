@@ -1,13 +1,7 @@
 name: 05-01 Event type and Activity Types
 
 on:
-  pull_request:
-    types:
-      - opened
-      - synchronize
-    branches:
-      - main
-
+  workflow_dispatch:
 jobs:
   echo:
     runs-on: ubuntu-latest
