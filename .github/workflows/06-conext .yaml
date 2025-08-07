@@ -1,7 +1,6 @@
 name: 06-Contexts
 run-name: My custom workflow run name - ${{ github.workflow }}
 on: 
-  push:
   workflow_dispatch:
     
 jobs:
