@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Running unit tests
-      run: echo "Running tests..
+      run: echo "Running tests.."
     - name: Failing Tests
       if: ${{ !inputs.pass-unit-tests }}
       run: exit 1
