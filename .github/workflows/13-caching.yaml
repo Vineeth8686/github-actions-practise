@@ -74,7 +74,7 @@ jobs:
     needs: install-deps
     defaults:
       run:
-        working-directory: 13-caching\react-app
+        working-directory: 13-caching/react-app
     steps:
     - name: Checkout Code
       uses: actions/checkout@v4
