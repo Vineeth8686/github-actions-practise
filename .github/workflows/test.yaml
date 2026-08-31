@@ -8,15 +8,12 @@ jobs:
     steps:
     - name: Get code
       uses: actions/checkout@v3
-    - name: Install nodejs
-      uses: actions/setup-node@v3
-      with:
-        node-version: 18
-    - name: Install dependencies
-      run: |
-       cd "./02 Starting Project" && npm ci
-    - name: Run tests
-      run: |
-       cd "./02 Starting Project" && npm test
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v6.2.3
+      with: 
+        role-to-assume: arn:aws:iam::654654263428:role/github-actions-openid-demo
+        aws-region: "us-east-1"
+    - name: Verify AWS Credential
+      run: aws sts get-caller-identity
     
   
