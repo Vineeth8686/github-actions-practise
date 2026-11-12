@@ -117,7 +117,7 @@ jobs:
         uses: aquasecurity/setup-trivy@v0.2.0
         with:
           cache: true
-          version: v0.76.2
+          version: latest
       - name: Verify Trivy Installation
         run: |
           trivy --version
