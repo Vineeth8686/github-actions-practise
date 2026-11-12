@@ -19,9 +19,15 @@ jobs:
         run: |
           docker run --rm \
             -v "${{github.workspace}}":/repo \
-            zricethezav/gitleaks:latest detech \
+            zricethezav/gitleaks:latest detect \
             --source=/repo \
             --report-format=json \
             --report-path=/repo/gitleaks-report.json \
             --redact \
             --exit-code 0
+      - name: Upload gitleaks-report.json
+        uses: actions/upload-artifact@v7
+        with:
+          name: gitleaks-report
+          path: gitleaks-report.json
+          if-no-file-found: warn
