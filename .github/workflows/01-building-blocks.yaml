@@ -1,0 +1,17 @@
+name: 01 - Building Block
+on: workflow_dispatch
+jobs:
+  echo-hello:
+    runs-on: ubuntu-ubuntu
+    steps:
+    - name: Say hellow
+      run: echo "Hellow"
+  echo-Goodbye:
+    runs-on: ubuntu-latest
+    steps:
+    - name: successfull step
+      run: |
+        echo "I will succeed"
+        exit 0
+    - name: say goodbye
+      run: echo "GoodBye!"
